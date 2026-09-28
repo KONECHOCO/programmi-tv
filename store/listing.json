@@ -5,9 +5,9 @@
     "primaryLocale": "it",
     "primaryCategory": "ENTERTAINMENT",
     "secondaryCategory": "LIFESTYLE",
-    "privacyPolicyUrl": "https://konechoco.github.io/programmi-tv/legal/privacy.html",
-    "supportUrl": "https://konechoco.github.io/programmi-tv/legal/support.html",
-    "marketingUrl": "https://konechoco.github.io/programmi-tv/",
+    "privacyPolicyUrl": "https://cineguide.ikonetsolutions.com/legal/privacy.html",
+    "supportUrl": "https://cineguide.ikonetsolutions.com/legal/support.html",
+    "marketingUrl": "https://cineguide.ikonetsolutions.com/",
     "price": "Free (ads) + in-app purchase CineGuide Pro 2,99 €",
     "ageRating": "4+ / PEGI 3 — no objectionable content; ads present"
   },
@@ -136,6 +136,6 @@
     }
   },
   "review": {
-    "notes": "CineGuide is a TV listings guide. No login is required. Listings are loaded from https://konechoco.github.io/programmi-tv/epg/ (refreshed every 6 hours). To test the in-app purchase: gear icon (Settings) > Go Pro > Buy; 'Restore purchases' is on the same screen. Reminders: open any upcoming programme > Remind me > choose a time; a local notification is scheduled. Ads are served by Google AdMob after the Google UMP consent form (EEA) and the App Tracking Transparency prompt (iOS); Pro users see no ads."
+    "notes": "CineGuide is a TV listings guide. No login is required. Listings are loaded from https://cineguide.ikonetsolutions.com/epg/ (refreshed every 6 hours). To test the in-app purchase: gear icon (Settings) > Go Pro > Buy; 'Restore purchases' is on the same screen. Reminders: open any upcoming programme > Remind me > choose a time; a local notification is scheduled. Ads are served by Google AdMob after the Google UMP consent form (EEA) and the App Tracking Transparency prompt (iOS); Pro users see no ads."
   }
 }

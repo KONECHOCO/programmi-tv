@@ -8,7 +8,7 @@ condivisione, 6 lingue (IT, EN, ES, FR, DE, PT), pubblicità AdMob e acquisto un
 ```
 GitHub Actions (ogni 6 ore)                         App (iOS / Android / web)
  scripts/epg/build-epg.mjs                           src/services/epg.js
-   ├─ XMLTV per paese (epgshare01.online)   ──►  https://konechoco.github.io/programmi-tv/epg/
+   ├─ XMLTV per paese (epgshare01.online)   ──►  https://cineguide.ikonetsolutions.com/epg/
    ├─ loghi canali (iptv-org)                          index.json · <PAESE>/channels.json · <PAESE>/<data>.json
    └─ lineup e numeri LCN (scripts/epg/lineups.mjs)
 ```
@@ -40,7 +40,7 @@ Altri comandi: `npm run build`, `npm run lint`, `npx cap sync`, `npm run assets:
 | Screenshot iPhone 6.9", iPad 13", Android | `store/screenshots/<device>/<lingua>/` |
 | Caricamento su App Store Connect (testi, categorie, IAP 2,99 €) | `node scripts/store/asc-setup.mjs [--apply]` |
 | Build firmate | `codemagic.yaml` (`android-release`, `ios-release`) |
-| Privacy / termini / supporto | `https://konechoco.github.io/programmi-tv/legal/` |
+| Privacy / termini / supporto | `https://cineguide.ikonetsolutions.com/legal/` |
 
 Passaggi manuali una tantum (non automatizzabili via API):
 1. **AdMob**: app e unità già create (ID in `codemagic.yaml`).
