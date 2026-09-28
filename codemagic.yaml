@@ -81,8 +81,9 @@ workflows:
       app_store_connect: Ikonet Solutions
     environment:
       ios_signing:
-        distribution_type: app_store
-        bundle_identifier: com.ikonet.cineguide
+        # certificato Apple Distribution già caricato su Codemagic (usato anche da diario-scuola-plus)
+        certificates:
+          - lexiguess_distribution
       vars:
         BUNDLE_ID: com.ikonet.cineguide
         XCODE_WORKSPACE: ios/App/App.xcworkspace
@@ -113,8 +114,17 @@ workflows:
           fi
       - name: CocoaPods
         script: cd ios/App && pod install
+      - name: Profilo di provisioning (ios/signing, creato con scripts/store/asc-profile.mjs)
+        script: |
+          PROFILES="$HOME/Library/MobileDevice/Provisioning Profiles"
+          mkdir -p "$PROFILES"
+          for p in ios/signing/*.mobileprovision; do
+            UUID=$(security cms -D -i "$p" | plutil -extract UUID raw -)
+            cp "$p" "$PROFILES/$UUID.mobileprovision"
+            echo "Installato $p ($UUID)"
+          done
       - name: Profili di firma
-        script: xcode-project use-profiles
+        script: xcode-project use-profiles --project ios/App/App.xcodeproj
       - name: Numero di build (ultimo TestFlight + 1)
         script: |
           set +e
