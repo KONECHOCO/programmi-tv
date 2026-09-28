@@ -2,9 +2,6 @@
 # Prerequisiti in Codemagic (una tantum):
 #   - app collegata al repo KONECHOCO/programmi-tv
 #   - gruppo variabili "google_play"   → GOOGLE_PLAY_SERVICE_ACCOUNT_JSON (già usato dalle altre app)
-#   - gruppo variabili "cineguide_admob" → ADMOB_ANDROID_APP_ID, ADMOB_IOS_APP_ID,
-#       VITE_ADMOB_ANDROID_BANNER_ID, VITE_ADMOB_ANDROID_INTERSTITIAL_ID,
-#       VITE_ADMOB_IOS_BANNER_ID, VITE_ADMOB_IOS_INTERSTITIAL_ID
 #   - keystore Android "ithelpdesk_android" e integrazione App Store Connect "Ikonet Solutions" (già esistenti)
 # Le build partono solo manualmente (nessun trigger automatico).
 
@@ -32,11 +29,17 @@ workflows:
         - ithelpdesk_android
       groups:
         - google_play
-        - cineguide_admob
       vars:
         PACKAGE_NAME: com.ikonet.cineguide
         GOOGLE_PLAY_TRACK: internal
         VITE_APP_VERSION: 1.0.0
+        # AdMob (account pub-1151868778464777) – ID pubblici, inclusi comunque nell'app
+        ADMOB_ANDROID_APP_ID: ca-app-pub-1151868778464777~4109857664
+        ADMOB_IOS_APP_ID: ca-app-pub-1151868778464777~9586554785
+        VITE_ADMOB_ANDROID_BANNER_ID: ca-app-pub-1151868778464777/4735795196
+        VITE_ADMOB_ANDROID_INTERSTITIAL_ID: ca-app-pub-1151868778464777/1708064768
+        VITE_ADMOB_IOS_BANNER_ID: ca-app-pub-1151868778464777/3614285217
+        VITE_ADMOB_IOS_INTERSTITIAL_ID: ca-app-pub-1151868778464777/1675266016
       node: 22
       java: 21
     scripts:
@@ -80,13 +83,18 @@ workflows:
       ios_signing:
         distribution_type: app_store
         bundle_identifier: com.ikonet.cineguide
-      groups:
-        - cineguide_admob
       vars:
         BUNDLE_ID: com.ikonet.cineguide
         XCODE_WORKSPACE: ios/App/App.xcworkspace
         XCODE_SCHEME: App
         VITE_APP_VERSION: 1.0.0
+        # AdMob (account pub-1151868778464777) – ID pubblici, inclusi comunque nell'app
+        ADMOB_ANDROID_APP_ID: ca-app-pub-1151868778464777~4109857664
+        ADMOB_IOS_APP_ID: ca-app-pub-1151868778464777~9586554785
+        VITE_ADMOB_ANDROID_BANNER_ID: ca-app-pub-1151868778464777/4735795196
+        VITE_ADMOB_ANDROID_INTERSTITIAL_ID: ca-app-pub-1151868778464777/1708064768
+        VITE_ADMOB_IOS_BANNER_ID: ca-app-pub-1151868778464777/3614285217
+        VITE_ADMOB_IOS_INTERSTITIAL_ID: ca-app-pub-1151868778464777/1675266016
       node: 22
       xcode: latest
       cocoapods: default

@@ -43,7 +43,7 @@ Altri comandi: `npm run build`, `npm run lint`, `npx cap sync`, `npm run assets:
 | Privacy / termini / supporto | `https://konechoco.github.io/programmi-tv/legal/` |
 
 Passaggi manuali una tantum (non automatizzabili via API):
-1. **AdMob**: creare le app iOS e Android e le unità banner + interstitial; mettere i 6 ID nel gruppo Codemagic `cineguide_admob`.
+1. **AdMob**: app e unità già create (ID in `codemagic.yaml`).
 2. **App Store Connect**: creare l'app (bundle `com.ikonet.cineguide`, SKU `cineguide-ios`), poi lanciare `asc-setup.mjs --apply`.
 3. **Google Play Console**: creare l'app `com.ikonet.cineguide`, il prodotto in-app `com.ikonet.cineguide.pro` a 2,99 €,
    e compilare scheda dati/sicurezza (ID pubblicità: sì; dati raccolti: solo tramite AdMob).
