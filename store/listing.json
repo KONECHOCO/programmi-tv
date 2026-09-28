@@ -15,12 +15,21 @@
     "productId": "com.ikonet.cineguide.pro",
     "referenceName": "CineGuide Pro",
     "type": "NON_CONSUMABLE",
-    "basePrice": { "territory": "ITA", "currency": "EUR", "price": "2.99" },
+    "basePrice": {
+      "territory": "ITA",
+      "currency": "EUR",
+      "price": "2.99"
+    },
     "reviewNote": "One-time purchase. Removes all ads (AdMob banner and interstitials) and the limit of 3 followed series. Open Settings (gear icon) > Go Pro, or tap the Pro button in the top bar. Restore purchases is on the same screen."
   },
   "locales": {
     "it": {
-      "asc": ["it"], "play": ["it-IT"],
+      "asc": [
+        "it"
+      ],
+      "play": [
+        "it-IT"
+      ],
       "name": "CineGuide: Guida TV",
       "subtitle": "Stasera in TV e promemoria",
       "promo": "La guida TV completa: cosa c'è ora e stasera su Rai, Mediaset, La7, Sky e DAZN. Promemoria prima dell'inizio e avvisi per le tue serie.",
@@ -29,10 +38,19 @@
       "iapName": "CineGuide Pro",
       "iapDescription": "Niente pubblicità e serie illimitate",
       "whatsNew": "Prima versione di CineGuide: guida TV completa per 17 paesi, promemoria, serie seguite e voti.",
-      "description": "CineGuide è la guida TV veloce e completa per sapere cosa c'è in televisione adesso, stasera e nei prossimi giorni.\n\n📺 ORA IN ONDA\nTutti i canali con il programma in corso, la barra di avanzamento e cosa va in onda dopo. Oltre 120 canali italiani con la numerazione del digitale terrestre: Rai, Mediaset, La7, TV8, Nove, Discovery, Sky, DAZN e molti altri.\n\n🌙 STASERA IN TV\nLa prima e la seconda serata di tutti i canali in un colpo d'occhio, con locandine e filtri per genere: film, serie, sport, intrattenimento, documentari, bambini e news.\n\n🗓 GUIDA COMPLETA\nIl palinsesto di ogni canale per oggi e i prossimi giorni, con trame, cast, regia ed episodi.\n\n🔔 PROMEMORIA\nTocca la campanella e ricevi una notifica all'inizio o 5, 15, 30 o 60 minuti prima. Funziona anche con l'app chiusa.\n\n❤️ SEGUI LE TUE SERIE\nSegui una serie o un programma: CineGuide ti avvisa ogni volta che va in onda, su qualsiasi canale.\n\n⭐ VOTA E CONDIVIDI\nDai da 1 a 5 stelle a ciò che guardi, tieni il tuo diario TV e condividi programmi e voti con gli amici. Trailer, IMDb e \"dove vederlo in streaming\" a portata di tocco.\n\n🔎 CERCA\nTrova un film o una serie in tutti i canali per i prossimi giorni.\n\n🌍 17 PAESI E 6 LINGUE\nItalia, Regno Unito, Irlanda, Stati Uniti, Canada, Australia, Germania, Austria, Svizzera, Francia, Belgio, Spagna, Messico, Argentina, Portogallo, Brasile e Paesi Bassi. App in italiano, inglese, spagnolo, francese, tedesco e portoghese.\n\n✨ Canali preferiti, filtro gratuiti/pay TV, tema chiaro e scuro, nessuna registrazione: i tuoi dati restano sul telefono.\n\n👑 CINEGUIDE PRO\nUn solo acquisto, per sempre (nessun abbonamento): niente pubblicità e serie seguite illimitate.\n\nI palinsesti sono forniti dalle emittenti tramite fonti pubbliche e possono subire variazioni. CineGuide non trasmette programmi."
+      "description": "CineGuide è la guida TV veloce e completa per sapere cosa c'è in televisione adesso, stasera e nei prossimi giorni.\n\nORA IN ONDA\nTutti i canali con il programma in corso, la barra di avanzamento e cosa va in onda dopo. Oltre 120 canali italiani con la numerazione del digitale terrestre: Rai, Mediaset, La7, TV8, Nove, Discovery, Sky, DAZN e molti altri.\n\nSTASERA IN TV\nLa prima e la seconda serata di tutti i canali in un colpo d'occhio, con locandine e filtri per genere: film, serie, sport, intrattenimento, documentari, bambini e news.\n\nGUIDA COMPLETA\nIl palinsesto di ogni canale per oggi e i prossimi giorni, con trame, cast, regia ed episodi.\n\nPROMEMORIA\nTocca la campanella e ricevi una notifica all'inizio o 5, 15, 30 o 60 minuti prima. Funziona anche con l'app chiusa.\n\nSEGUI LE TUE SERIE\nSegui una serie o un programma: CineGuide ti avvisa ogni volta che va in onda, su qualsiasi canale.\n\nVOTA E CONDIVIDI\nDai da 1 a 5 stelle a ciò che guardi, tieni il tuo diario TV e condividi programmi e voti con gli amici. Trailer, IMDb e \"dove vederlo in streaming\" a portata di tocco.\n\nCERCA\nTrova un film o una serie in tutti i canali per i prossimi giorni.\n\n17 PAESI E 6 LINGUE\nItalia, Regno Unito, Irlanda, Stati Uniti, Canada, Australia, Germania, Austria, Svizzera, Francia, Belgio, Spagna, Messico, Argentina, Portogallo, Brasile e Paesi Bassi. App in italiano, inglese, spagnolo, francese, tedesco e portoghese.\n\nCanali preferiti, filtro gratuiti/pay TV, tema chiaro e scuro, nessuna registrazione: i tuoi dati restano sul telefono.\n\nCINEGUIDE PRO\nUn solo acquisto, per sempre (nessun abbonamento): niente pubblicità e serie seguite illimitate.\n\nI palinsesti sono forniti dalle emittenti tramite fonti pubbliche e possono subire variazioni. CineGuide non trasmette programmi."
     },
     "en": {
-      "asc": ["en-US", "en-GB", "en-AU", "en-CA"], "play": ["en-US", "en-GB"],
+      "asc": [
+        "en-US",
+        "en-GB",
+        "en-AU",
+        "en-CA"
+      ],
+      "play": [
+        "en-US",
+        "en-GB"
+      ],
       "name": "CineGuide: TV Guide",
       "subtitle": "What's on tonight + reminders",
       "promo": "The complete TV guide: what's on now and tonight on every channel, reminders before shows start and alerts for the series you follow.",
@@ -41,10 +59,17 @@
       "iapName": "CineGuide Pro",
       "iapDescription": "No ads and unlimited followed series",
       "whatsNew": "First release of CineGuide: full TV guide for 17 countries, reminders, followed series and ratings.",
-      "description": "CineGuide is the fast, complete TV guide to see what's on now, tonight and over the coming days.\n\n📺 ON NOW\nEvery channel with the current show, a progress bar and what's next — BBC, ITV, Channel 4, Channel 5, Sky and hundreds more across 17 countries.\n\n🌙 TONIGHT\nPrime time and late night on all channels at a glance, with posters and genre filters: movies, series, sport, entertainment, documentaries, kids and news.\n\n🗓 FULL GUIDE\nEach channel's schedule for today and the coming days, with synopsis, cast, director and episode details.\n\n🔔 REMINDERS\nTap the bell to get a notification at start time or 5, 15, 30 or 60 minutes before. Works even when the app is closed.\n\n❤️ FOLLOW YOUR SERIES\nFollow a series or show and CineGuide alerts you every time it airs, on any channel.\n\n⭐ RATE AND SHARE\nRate what you watch from 1 to 5 stars, keep your TV diary and share shows and ratings with friends. Trailers, IMDb and \"where to watch\" one tap away.\n\n🔎 SEARCH\nFind a movie or series across all channels for the coming days.\n\n🌍 17 COUNTRIES, 6 LANGUAGES\nUK, Ireland, USA, Canada, Australia, Italy, Germany, Austria, Switzerland, France, Belgium, Spain, Mexico, Argentina, Portugal, Brazil and the Netherlands.\n\n✨ Favourite channels, free-to-air/pay TV filter, light and dark theme, no sign-up: your data stays on your phone.\n\n👑 CINEGUIDE PRO\nOne purchase, forever (no subscription): no ads and unlimited followed series.\n\nListings come from broadcasters via public sources and may change. CineGuide does not stream any programme."
+      "description": "CineGuide is the fast, complete TV guide to see what's on now, tonight and over the coming days.\n\nON NOW\nEvery channel with the current show, a progress bar and what's next — BBC, ITV, Channel 4, Channel 5, Sky and hundreds more across 17 countries.\n\nTONIGHT\nPrime time and late night on all channels at a glance, with posters and genre filters: movies, series, sport, entertainment, documentaries, kids and news.\n\nFULL GUIDE\nEach channel's schedule for today and the coming days, with synopsis, cast, director and episode details.\n\nREMINDERS\nTap the bell to get a notification at start time or 5, 15, 30 or 60 minutes before. Works even when the app is closed.\n\nFOLLOW YOUR SERIES\nFollow a series or show and CineGuide alerts you every time it airs, on any channel.\n\nRATE AND SHARE\nRate what you watch from 1 to 5 stars, keep your TV diary and share shows and ratings with friends. Trailers, IMDb and \"where to watch\" one tap away.\n\nSEARCH\nFind a movie or series across all channels for the coming days.\n\n17 COUNTRIES, 6 LANGUAGES\nUK, Ireland, USA, Canada, Australia, Italy, Germany, Austria, Switzerland, France, Belgium, Spain, Mexico, Argentina, Portugal, Brazil and the Netherlands.\n\nFavourite channels, free-to-air/pay TV filter, light and dark theme, no sign-up: your data stays on your phone.\n\nCINEGUIDE PRO\nOne purchase, forever (no subscription): no ads and unlimited followed series.\n\nListings come from broadcasters via public sources and may change. CineGuide does not stream any programme."
     },
     "es": {
-      "asc": ["es-ES", "es-MX"], "play": ["es-ES", "es-419"],
+      "asc": [
+        "es-ES",
+        "es-MX"
+      ],
+      "play": [
+        "es-ES",
+        "es-419"
+      ],
       "name": "CineGuide: Guía TV",
       "subtitle": "Qué ver esta noche y avisos",
       "promo": "La guía de TV completa: qué dan ahora y esta noche en todos los canales, recordatorios antes de empezar y avisos de tus series.",
@@ -53,10 +78,16 @@
       "iapName": "CineGuide Pro",
       "iapDescription": "Sin anuncios y series ilimitadas",
       "whatsNew": "Primera versión de CineGuide: guía de TV completa para 17 países, recordatorios, series seguidas y valoraciones.",
-      "description": "CineGuide es la guía de TV rápida y completa para saber qué dan ahora, esta noche y los próximos días.\n\n📺 AHORA\nTodos los canales con el programa en emisión, barra de progreso y lo que viene después: La 1, Antena 3, Cuatro, Telecinco, laSexta, Movistar Plus+ y cientos más en 17 países.\n\n🌙 ESTA NOCHE\nEl prime time de todos los canales de un vistazo, con carteles y filtros por género: cine, series, deportes, entretenimiento, documentales, infantil y noticias.\n\n🗓 GUÍA COMPLETA\nLa parrilla de cada canal para hoy y los próximos días, con sinopsis, reparto y episodios.\n\n🔔 RECORDATORIOS\nToca la campana y recibe un aviso al empezar o 5, 15, 30 o 60 minutos antes, incluso con la app cerrada.\n\n❤️ SIGUE TUS SERIES\nSigue una serie o programa y te avisamos cada vez que se emita, en cualquier canal.\n\n⭐ VALORA Y COMPARTE\nValora de 1 a 5 estrellas, lleva tu diario de TV y comparte con tus amigos. Tráiler, IMDb y \"dónde verlo\" a un toque.\n\n🔎 BUSCAR · 🌍 17 PAÍSES Y 6 IDIOMAS · ✨ Canales favoritos, filtro abierto/pago, tema claro y oscuro, sin registro.\n\n👑 CINEGUIDE PRO\nUna sola compra, para siempre (sin suscripción): sin anuncios y series seguidas ilimitadas.\n\nLa programación procede de las cadenas mediante fuentes públicas y puede cambiar. CineGuide no emite programas."
+      "description": "CineGuide es la guía de TV rápida y completa para saber qué dan ahora, esta noche y los próximos días.\n\nAHORA\nTodos los canales con el programa en emisión, barra de progreso y lo que viene después: La 1, Antena 3, Cuatro, Telecinco, laSexta, Movistar Plus+ y cientos más en 17 países.\n\nESTA NOCHE\nEl prime time de todos los canales de un vistazo, con carteles y filtros por género: cine, series, deportes, entretenimiento, documentales, infantil y noticias.\n\nGUÍA COMPLETA\nLa parrilla de cada canal para hoy y los próximos días, con sinopsis, reparto y episodios.\n\nRECORDATORIOS\nToca la campana y recibe un aviso al empezar o 5, 15, 30 o 60 minutos antes, incluso con la app cerrada.\n\nSIGUE TUS SERIES\nSigue una serie o programa y te avisamos cada vez que se emita, en cualquier canal.\n\nVALORA Y COMPARTE\nValora de 1 a 5 estrellas, lleva tu diario de TV y comparte con tus amigos. Tráiler, IMDb y \"dónde verlo\" a un toque.\n\nBUSCAR · 17 PAÍSES Y 6 IDIOMAS\n\nCanales favoritos, filtro abierto/pago, tema claro y oscuro, sin registro.\n\nCINEGUIDE PRO\nUna sola compra, para siempre (sin suscripción): sin anuncios y series seguidas ilimitadas.\n\nLa programación procede de las cadenas mediante fuentes públicas y puede cambiar. CineGuide no emite programas."
     },
     "fr": {
-      "asc": ["fr-FR", "fr-CA"], "play": ["fr-FR"],
+      "asc": [
+        "fr-FR",
+        "fr-CA"
+      ],
+      "play": [
+        "fr-FR"
+      ],
       "name": "CineGuide : Guide TV",
       "subtitle": "Ce soir à la télé et rappels",
       "promo": "Le guide TV complet : ce qui passe maintenant et ce soir sur toutes les chaînes, rappels avant le début et alertes pour vos séries.",
@@ -65,10 +96,15 @@
       "iapName": "CineGuide Pro",
       "iapDescription": "Sans pub et séries suivies illimitées",
       "whatsNew": "Première version de CineGuide : guide TV complet pour 17 pays, rappels, séries suivies et notes.",
-      "description": "CineGuide est le guide TV rapide et complet pour savoir ce qui passe maintenant, ce soir et les jours suivants.\n\n📺 EN DIRECT\nToutes les chaînes avec le programme en cours, sa progression et la suite : TF1, France 2, France 3, M6, Arte, Canal+ et des centaines d'autres dans 17 pays.\n\n🌙 CE SOIR\nLa première et la deuxième partie de soirée de toutes les chaînes en un coup d'œil, avec affiches et filtres par genre.\n\n🗓 GUIDE COMPLET\nLe programme de chaque chaîne pour aujourd'hui et les jours suivants, avec résumé, distribution et épisodes.\n\n🔔 RAPPELS\nTouchez la cloche pour être prévenu au début ou 5, 15, 30 ou 60 minutes avant, même app fermée.\n\n❤️ SUIVEZ VOS SÉRIES\nNous vous prévenons à chaque diffusion, sur toutes les chaînes.\n\n⭐ NOTEZ ET PARTAGEZ\nNotez de 1 à 5 étoiles et partagez avec vos amis. Bande-annonce, IMDb et « où le regarder » en un geste.\n\n🔎 RECHERCHE · 🌍 17 PAYS, 6 LANGUES · ✨ Chaînes favorites, thème clair/sombre, sans inscription.\n\n👑 CINEGUIDE PRO\nUn seul achat, pour toujours (sans abonnement) : sans publicité et séries suivies illimitées.\n\nLes programmes proviennent des chaînes via des sources publiques et peuvent changer. CineGuide ne diffuse aucun programme."
+      "description": "CineGuide est le guide TV rapide et complet pour savoir ce qui passe maintenant, ce soir et les jours suivants.\n\nEN DIRECT\nToutes les chaînes avec le programme en cours, sa progression et la suite : TF1, France 2, France 3, M6, Arte, Canal+ et des centaines d'autres dans 17 pays.\n\nCE SOIR\nLa première et la deuxième partie de soirée de toutes les chaînes en un coup d'œil, avec affiches et filtres par genre.\n\nGUIDE COMPLET\nLe programme de chaque chaîne pour aujourd'hui et les jours suivants, avec résumé, distribution et épisodes.\n\nRAPPELS\nTouchez la cloche pour être prévenu au début ou 5, 15, 30 ou 60 minutes avant, même app fermée.\n\nSUIVEZ VOS SÉRIES\nNous vous prévenons à chaque diffusion, sur toutes les chaînes.\n\nNOTEZ ET PARTAGEZ\nNotez de 1 à 5 étoiles et partagez avec vos amis. Bande-annonce, IMDb et « où le regarder » en un geste.\n\nRECHERCHE · 17 PAYS, 6 LANGUES\n\nChaînes favorites, thème clair/sombre, sans inscription.\n\nCINEGUIDE PRO\nUn seul achat, pour toujours (sans abonnement) : sans publicité et séries suivies illimitées.\n\nLes programmes proviennent des chaînes via des sources publiques et peuvent changer. CineGuide ne diffuse aucun programme."
     },
     "de": {
-      "asc": ["de-DE"], "play": ["de-DE"],
+      "asc": [
+        "de-DE"
+      ],
+      "play": [
+        "de-DE"
+      ],
       "name": "CineGuide: TV-Programm",
       "subtitle": "Heute Abend im TV + Erinnerung",
       "promo": "Das komplette TV-Programm: was jetzt und heute Abend läuft, Erinnerungen vor Beginn und Hinweise zu deinen Serien.",
@@ -77,10 +113,17 @@
       "iapName": "CineGuide Pro",
       "iapDescription": "Keine Werbung, unbegrenzt Serien folgen",
       "whatsNew": "Erste Version von CineGuide: komplettes TV-Programm für 17 Länder, Erinnerungen, Serien und Bewertungen.",
-      "description": "CineGuide ist das schnelle, vollständige TV-Programm: was jetzt läuft, heute Abend und in den nächsten Tagen.\n\n📺 JETZT IM TV\nAlle Sender mit laufender Sendung, Fortschrittsbalken und was danach kommt: Das Erste, ZDF, RTL, SAT.1, ProSieben, VOX und hunderte weitere in 17 Ländern.\n\n🌙 HEUTE ABEND\nDie Primetime aller Sender auf einen Blick, mit Bildern und Genre-Filtern: Filme, Serien, Sport, Unterhaltung, Dokus, Kinder und Nachrichten.\n\n🗓 KOMPLETTES PROGRAMM\nDas Programm jedes Senders für heute und die nächsten Tage, mit Inhalt, Besetzung und Folgen.\n\n🔔 ERINNERUNGEN\nTippe auf die Glocke: Hinweis zum Start oder 5, 15, 30 oder 60 Minuten vorher – auch bei geschlossener App.\n\n❤️ SERIEN FOLGEN\nWir melden uns bei jeder Ausstrahlung, auf jedem Sender.\n\n⭐ BEWERTEN UND TEILEN\n1 bis 5 Sterne vergeben und mit Freunden teilen. Trailer, IMDb und „Wo streamen“ mit einem Tipp.\n\n🔎 SUCHE · 🌍 17 LÄNDER, 6 SPRACHEN · ✨ Lieblingssender, Free-/Pay-TV-Filter, helles und dunkles Design, ohne Anmeldung.\n\n👑 CINEGUIDE PRO\nEinmal kaufen, für immer (kein Abo): keine Werbung und unbegrenzt Serien folgen.\n\nDie Programmdaten stammen über öffentliche Quellen von den Sendern und können sich ändern. CineGuide überträgt keine Sendungen."
+      "description": "CineGuide ist das schnelle, vollständige TV-Programm: was jetzt läuft, heute Abend und in den nächsten Tagen.\n\nJETZT IM TV\nAlle Sender mit laufender Sendung, Fortschrittsbalken und was danach kommt: Das Erste, ZDF, RTL, SAT.1, ProSieben, VOX und hunderte weitere in 17 Ländern.\n\nHEUTE ABEND\nDie Primetime aller Sender auf einen Blick, mit Bildern und Genre-Filtern: Filme, Serien, Sport, Unterhaltung, Dokus, Kinder und Nachrichten.\n\nKOMPLETTES PROGRAMM\nDas Programm jedes Senders für heute und die nächsten Tage, mit Inhalt, Besetzung und Folgen.\n\nERINNERUNGEN\nTippe auf die Glocke: Hinweis zum Start oder 5, 15, 30 oder 60 Minuten vorher – auch bei geschlossener App.\n\nSERIEN FOLGEN\nWir melden uns bei jeder Ausstrahlung, auf jedem Sender.\n\nBEWERTEN UND TEILEN\n1 bis 5 Sterne vergeben und mit Freunden teilen. Trailer, IMDb und „Wo streamen“ mit einem Tipp.\n\nSUCHE · 17 LÄNDER, 6 SPRACHEN\n\nLieblingssender, Free-/Pay-TV-Filter, helles und dunkles Design, ohne Anmeldung.\n\nCINEGUIDE PRO\nEinmal kaufen, für immer (kein Abo): keine Werbung und unbegrenzt Serien folgen.\n\nDie Programmdaten stammen über öffentliche Quellen von den Sendern und können sich ändern. CineGuide überträgt keine Sendungen."
     },
     "pt": {
-      "asc": ["pt-PT", "pt-BR"], "play": ["pt-PT", "pt-BR"],
+      "asc": [
+        "pt-PT",
+        "pt-BR"
+      ],
+      "play": [
+        "pt-PT",
+        "pt-BR"
+      ],
       "name": "CineGuide: Guia de TV",
       "subtitle": "O que ver hoje e lembretes",
       "promo": "O guia de TV completo: o que está a dar agora e hoje à noite em todos os canais, lembretes antes de começar e avisos das suas séries.",
@@ -89,7 +132,7 @@
       "iapName": "CineGuide Pro",
       "iapDescription": "Sem anúncios e séries ilimitadas",
       "whatsNew": "Primeira versão do CineGuide: guia de TV completo para 17 países, lembretes, séries seguidas e avaliações.",
-      "description": "O CineGuide é o guia de TV rápido e completo para saber o que está a dar agora, hoje à noite e nos próximos dias.\n\n📺 AGORA\nTodos os canais com o programa no ar, barra de progresso e o que vem a seguir: Globo, SBT, Record, Band, RTP, SIC, TVI e centenas de outros em 17 países.\n\n🌙 HOJE À NOITE\nO horário nobre de todos os canais num relance, com cartazes e filtros por género.\n\n🗓 GUIA COMPLETO\nA programação de cada canal para hoje e os próximos dias, com sinopse, elenco e episódios.\n\n🔔 LEMBRETES\nToque no sino e receba um aviso no início ou 5, 15, 30 ou 60 minutos antes, mesmo com a app fechada.\n\n❤️ SIGA AS SUAS SÉRIES\nAvisamos sempre que for exibida, em qualquer canal.\n\n⭐ AVALIE E PARTILHE\nDê de 1 a 5 estrelas e partilhe com os amigos. Trailer, IMDb e \"onde ver\" num toque.\n\n🔎 PESQUISA · 🌍 17 PAÍSES, 6 IDIOMAS · ✨ Canais favoritos, tema claro e escuro, sem registo.\n\n👑 CINEGUIDE PRO\nUma só compra, para sempre (sem assinatura): sem anúncios e séries seguidas ilimitadas.\n\nA programação vem dos canais através de fontes públicas e pode mudar. O CineGuide não transmite programas."
+      "description": "O CineGuide é o guia de TV rápido e completo para saber o que está a dar agora, hoje à noite e nos próximos dias.\n\nAGORA\nTodos os canais com o programa no ar, barra de progresso e o que vem a seguir: Globo, SBT, Record, Band, RTP, SIC, TVI e centenas de outros em 17 países.\n\nHOJE À NOITE\nO horário nobre de todos os canais num relance, com cartazes e filtros por género.\n\nGUIA COMPLETO\nA programação de cada canal para hoje e os próximos dias, com sinopse, elenco e episódios.\n\nLEMBRETES\nToque no sino e receba um aviso no início ou 5, 15, 30 ou 60 minutos antes, mesmo com a app fechada.\n\nSIGA AS SUAS SÉRIES\nAvisamos sempre que for exibida, em qualquer canal.\n\nAVALIE E PARTILHE\nDê de 1 a 5 estrelas e partilhe com os amigos. Trailer, IMDb e \"onde ver\" num toque.\n\nPESQUISA · 17 PAÍSES, 6 IDIOMAS\n\nCanais favoritos, tema claro e escuro, sem registo.\n\nCINEGUIDE PRO\nUma só compra, para sempre (sem assinatura): sem anúncios e séries seguidas ilimitadas.\n\nA programação vem dos canais através de fontes públicas e pode mudar. O CineGuide não transmite programas."
     }
   },
   "review": {
