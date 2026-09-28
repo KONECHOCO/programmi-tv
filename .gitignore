@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Dati EPG generati (pubblicati su GitHub Pages, non nel repo)
+.epg-cache
+

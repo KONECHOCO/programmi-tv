@@ -1,27 +1,46 @@
 {
-  "name": "programmi-tv",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "oxlint",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "canvas-confetti": "^1.9.4",
-    "lucide-react": "^1.48.0",
-    "react": "^19.2.8",
-    "react-dom": "^19.2.8"
-  },
-  "devDependencies": {
-    "@tailwindcss/vite": "^4.3.3",
-    "@types/react": "^19.2.18",
-    "@types/react-dom": "^19.2.7",
-    "@vitejs/plugin-react": "^6.1.1",
-    "oxlint": "^1.81.0",
-    "tailwindcss": "^4.3.3",
-    "vite": "^8.3.0"
-  }
+    "name":  "cineguide",
+    "private":  true,
+    "version":  "1.0.0",
+    "type":  "module",
+    "scripts":  {
+                    "dev":  "vite",
+                    "build":  "vite build",
+                    "lint":  "oxlint",
+                    "preview":  "vite preview",
+                    "epg":  "node scripts/epg/build-epg.mjs dist/epg",
+                    "epg:dev":  "node scripts/epg/build-epg.mjs .epg-cache",
+                    "cap:sync":  "npm run build \u0026\u0026 cap sync",
+                    "assets:generate":  "capacitor-assets generate --iconBackgroundColor \"#0b0d18\" --iconBackgroundColorDark \"#0b0d18\" --splashBackgroundColor \"#0b0d18\" --splashBackgroundColorDark \"#0b0d18\"",
+                    "screenshots:store":  "node scripts/capture-store-screenshots.mjs"
+                },
+    "dependencies":  {
+                         "@capacitor-community/admob":  "^7.2.0",
+                         "@capacitor-community/in-app-review":  "^7.1.0",
+                         "@capacitor/android":  "^7.6.9",
+                         "@capacitor/app":  "^7.1.2",
+                         "@capacitor/core":  "^7.6.9",
+                         "@capacitor/ios":  "^7.6.9",
+                         "@capacitor/local-notifications":  "^7.0.7",
+                         "@capacitor/share":  "^7.0.4",
+                         "@capacitor/splash-screen":  "^7.0.5",
+                         "@capacitor/status-bar":  "^7.0.6",
+                         "cordova-plugin-purchase":  "^13.18.0",
+                         "lucide-react":  "^1.48.0",
+                         "react":  "^19.2.8",
+                         "react-dom":  "^19.2.8"
+                     },
+    "devDependencies":  {
+                            "@capacitor/assets":  "^3.0.5",
+                            "@capacitor/cli":  "^7.6.9",
+                            "@tailwindcss/vite":  "^4.3.3",
+                            "@types/react":  "^19.2.18",
+                            "@types/react-dom":  "^19.2.7",
+                            "@vitejs/plugin-react":  "^6.1.1",
+                            "oxlint":  "^1.81.0",
+                            "playwright":  "^1.63.0",
+                            "sharp":  "^0.35.5",
+                            "tailwindcss":  "^4.3.3",
+                            "vite":  "^8.3.0"
+                        }
 }

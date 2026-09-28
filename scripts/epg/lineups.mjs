@@ -1,0 +1,143 @@
+// Canali principali per paese, nell'ordine in cui compaiono nell'app.
+// Formato: [nome visualizzato, numero LCN o null, pacchetto ('free' | 'pay'), ...alias extra]
+// Il matching con il feed XMLTV avviene sul nome normalizzato (vedi normalizeName in build-epg.mjs).
+
+export const LINEUPS = {
+  IT: [
+    ['Rai 1', 1, 'free', 'rai uno'], ['Rai 2', 2, 'free', 'rai due'], ['Rai 3', 3, 'free', 'rai tre'],
+    ['Rete 4', 4, 'free', 'retequattro'], ['Canale 5', 5, 'free'], ['Italia 1', 6, 'free'],
+    ['La7', 7, 'free'], ['TV8', 8, 'free'], ['Nove', 9, 'free'], ['20 Mediaset', 20, 'free', '20'],
+    ['Rai 4', 21, 'free'], ['Iris', 22, 'free'], ['Rai 5', 23, 'free'], ['Rai Movie', 24, 'free'],
+    ['Rai Premium', 25, 'free'], ['Cielo', 26, 'free'], ['Twentyseven', 27, 'free', '27 twentyseven'],
+    ['TV2000', 28, 'free'], ['La7d', 29, 'free'], ['La5', 30, 'free', 'la 5'], ['Real Time', 31, 'free'],
+    ['QVC', 32, 'free'], ['Food Network', 33, 'free'], ['Cine34', 34, 'free'], ['Focus', 35, 'free'],
+    ['RTL 102.5', 36, 'free', 'rtl 1025'], ['Warner TV', 37, 'free'], ['Giallo', 38, 'free', 'giallo tv'],
+    ['Top Crime', 39, 'free', 'topcrime'], ['Boing', 40, 'free'], ['K2', 41, 'free'], ['Rai Gulp', 42, 'free'],
+    ['Rai Yoyo', 43, 'free'], ['Frisbee', 44, 'free'], ['Cartoonito', 46, 'free'], ['Super!', 47, 'free'],
+    ['Rai News 24', 48, 'free', 'rainews24'], ['Italia 2', 49, 'free'], ['Sky TG24', 50, 'free'],
+    ['TGCom24', 51, 'free', 'tgcom'], ['DMAX', 52, 'free'], ['Rai Storia', 54, 'free'],
+    ['Mediaset Extra', 55, 'free'], ['HGTV', 56, 'free'], ['Rai Scuola', 57, 'free'], ['Rai Sport', 58, 'free', 'rai sport +'],
+    ['Motor Trend', 59, 'free'], ['La7 Cinema', null, 'free'],
+    ['Sky Uno', null, 'pay'], ['Sky Atlantic', null, 'pay'], ['Sky Serie', null, 'pay'], ['Sky Cinema Uno', null, 'pay'],
+    ['Sky Cinema Due', null, 'pay'], ['Sky Cinema Collection', null, 'pay'], ['Sky Cinema Family', null, 'pay'],
+    ['Sky Cinema Action', null, 'pay'], ['Sky Cinema Suspense', null, 'pay'], ['Sky Cinema Romance', null, 'pay'],
+    ['Sky Cinema Drama', null, 'pay'], ['Sky Cinema Comedy', null, 'pay'], ['Sky Sport Uno', null, 'pay'],
+    ['Sky Sport Calcio', null, 'pay'], ['Sky Sport 24', null, 'pay'], ['Sky Sport F1', null, 'pay'],
+    ['Sky Sport MotoGP', null, 'pay'], ['Sky Sport Tennis', null, 'pay'], ['Sky Sport NBA', null, 'pay'],
+    ['Sky Sport Arena', null, 'pay'], ['Sky Sport Max', null, 'pay'], ['DAZN 1', null, 'pay', 'dazn 1 it'],
+    ['DAZN 2', null, 'pay', 'dazn 2 it'], ['Eurosport', null, 'pay', 'eurosport italia'],
+    ['Eurosport 2', null, 'pay', 'eurosport 2 italia'], ['Sky Crime', null, 'pay'], ['Sky Investigation', null, 'pay'],
+    ['Sky Documentaries', null, 'pay'], ['Sky Nature', null, 'pay'], ['Sky Arte', null, 'pay'],
+    ['Comedy Central', null, 'pay'], ['History', null, 'pay'], ['Discovery Channel', null, 'pay'],
+  ],
+  GB: [
+    ['BBC One', 1, 'free', 'bbc 1', 'bbc one lon', 'bbc one london'], ['BBC Two', 2, 'free', 'bbc 2'], ['ITV1', 3, 'free', 'itv'],
+    ['Channel 4', 4, 'free'], ['Channel 5', 5, 'free', '5'], ['ITV2', 6, 'free'], ['BBC Three', 7, 'free'],
+    ['BBC Four', 9, 'free'], ['ITV3', 10, 'free'], ['E4', 13, 'free'], ['Film4', 14, 'free'],
+    ['More4', 18, 'free'], ['Dave', 19, 'free'], ['ITV4', null, 'free'], ['ITVBe', null, 'free'], ['Quest', null, 'free'],
+    ['Drama', null, 'free'], ['Yesterday', null, 'free'], ['CBBC', null, 'free'], ['CBeebies', null, 'free'],
+    ['BBC News', 231, 'free'], ['Sky News', 233, 'free'],
+    ['Sky Showcase', null, 'pay'], ['Sky Atlantic', null, 'pay'], ['Sky Max', null, 'pay'], ['Sky Witness', null, 'pay'],
+    ['Sky Cinema Premiere', null, 'pay'], ['Sky Sports Main Event', null, 'pay'], ['Sky Sports Premier League', null, 'pay'],
+    ['Sky Sports Football', null, 'pay'], ['Sky Sports F1', null, 'pay'], ['TNT Sports 1', null, 'pay'], ['TNT Sports 2', null, 'pay'],
+  ],
+  IE: [
+    ['RTÉ One', null, 'free', 'rte one', 'rte 1'], ['RTÉ2', null, 'free', 'rte 2', 'rte two'], ['Virgin Media One', null, 'free'],
+    ['Virgin Media Two', null, 'free'], ['Virgin Media Three', null, 'free'], ['TG4', null, 'free'], ['RTÉ News', null, 'free', 'rte news'],
+  ],
+  US: [
+    ['ABC', null, 'free', 'abc national feed'], ['CBS', null, 'free', 'cbs streaming sd east feed', 'cbs east'], ['NBC', null, 'free', 'nbc east stream'],
+    ['FOX', null, 'free', 'fox east', 'fox national feed'], ['PBS', null, 'free', 'pbs stream'], ['PBS Kids', null, 'free', 'pbs kids stream'],
+    ['The CW', null, 'free', 'cw'], ['CNN', null, 'pay'], ['Fox News', null, 'pay', 'fox news channel'],
+    ['MSNBC', null, 'pay', 'ms now'], ['ESPN', null, 'pay'], ['ESPN2', null, 'pay'], ['HBO', null, 'pay'],
+    ['AMC', null, 'pay'], ['FX', null, 'pay'], ['TNT', null, 'pay'], ['TBS', null, 'pay'], ['USA Network', null, 'pay'],
+    ['Discovery', null, 'pay', 'discovery channel'], ['HGTV', null, 'pay'], ['Food Network', null, 'pay'],
+    ['History', null, 'pay'], ['Nickelodeon', null, 'pay'], ['Disney Channel', null, 'pay'], ['Cartoon Network', null, 'pay'],
+  ],
+  CA: [
+    ['CBC', null, 'free'], ['CTV', null, 'free'], ['Global', null, 'free'], ['Citytv', null, 'free'],
+    ['ICI Radio-Canada Télé', null, 'free', 'radio canada', 'ici tele'], ['TVA', null, 'free'], ['Noovo', null, 'free'],
+    ['CBC News Network', null, 'pay'], ['TSN', null, 'pay', 'tsn 1'], ['Sportsnet', null, 'pay', 'sportsnet ontario'],
+  ],
+  AU: [
+    ['ABC TV', null, 'free', 'abc', 'abc sydney'], ['SBS', null, 'free', 'sbs sydney'], ['Seven', null, 'free', '7', '7 sydney'],
+    ['Nine', null, 'free', '9', '9 sydney'], ['10', null, 'free', 'ten', 'channel 10', '10 sydney'], ['7two', null, 'free', '7two sydney'],
+    ['7mate', null, 'free', '7mate sydney'], ['7flix', null, 'free', '7flix sydney'], ['9Gem', null, 'free', '9gem sydney'],
+    ['9Go!', null, 'free', '9go', '9go sydney'], ['9Life', null, 'free', '9life sydney'], ['10 Bold', null, 'free', '10 bold sydney'],
+    ['10 Peach', null, 'free', '10 peach sydney'], ['ABC Kids', null, 'free', 'abc kids sydney', 'abc family sydney'],
+    ['ABC Entertains', null, 'free', 'abc entertains sydney'], ['ABC News', null, 'free'], ['SBS Viceland', null, 'free', 'sbs viceland sydney'],
+  ],
+  DE: [
+    ['Das Erste', null, 'free', 'ard'], ['ZDF', null, 'free'], ['RTL', null, 'free'], ['SAT.1', null, 'free', 'sat 1'],
+    ['ProSieben', null, 'free', 'pro 7', 'prosieben'], ['VOX', null, 'free'], ['kabel eins', null, 'free', 'kabel 1'],
+    ['RTLZWEI', null, 'free', 'rtl 2', 'rtl zwei'], ['ZDFneo', null, 'free'], ['3sat', null, 'free'], ['arte', null, 'free'],
+    ['ONE', null, 'free'], ['tagesschau24', null, 'free'], ['phoenix', null, 'free'], ['KiKA', null, 'free'],
+    ['Super RTL', null, 'free'], ['sixx', null, 'free'], ['ProSieben MAXX', null, 'free'], ['NITRO', null, 'free', 'rtl nitro'],
+    ['DMAX', null, 'free'], ['TLC', null, 'free'], ['Tele 5', null, 'free'], ['ntv', null, 'free', 'n tv'],
+    ['WELT', null, 'free'], ['SPORT1', null, 'free', 'sport 1'], ['Eurosport 1', null, 'free'], ['BR Fernsehen', null, 'free', 'br'],
+    ['WDR', null, 'free'], ['NDR', null, 'free'], ['MDR', null, 'free'], ['SWR', null, 'free'], ['hr-fernsehen', null, 'free', 'hr'],
+    ['Sky One', null, 'pay'], ['Sky Atlantic', null, 'pay'], ['Sky Cinema Premieren', null, 'pay'], ['Sky Sport Bundesliga', null, 'pay'],
+  ],
+  AT: [
+    ['ORF 1', null, 'free', 'orf eins'], ['ORF 2', null, 'free'], ['ORF III', null, 'free', 'orf 3'], ['ServusTV', null, 'free', 'servus tv'],
+    ['ATV', null, 'free'], ['PULS 4', null, 'free'], ['PULS 24', null, 'free'], ['ORF Sport +', null, 'free', 'orf sport'],
+  ],
+  CH: [
+    ['SRF 1', null, 'free'], ['SRF zwei', null, 'free', 'srf 2'], ['SRF info', null, 'free'], ['RTS 1', null, 'free', 'rts un'],
+    ['RTS 2', null, 'free', 'rts deux'], ['RSI LA 1', null, 'free', 'rsi la1'], ['RSI LA 2', null, 'free', 'rsi la2'], ['3+', null, 'free', '3 plus'],
+  ],
+  FR: [
+    ['TF1', null, 'free'], ['France 2', null, 'free'], ['France 3', null, 'free'], ['Canal+', null, 'pay', 'canal plus'],
+    ['France 5', null, 'free'], ['M6', null, 'free'], ['Arte', null, 'free'], ['W9', null, 'free'], ['TMC', null, 'free'],
+    ['TFX', null, 'free'], ['LCP', null, 'free'], ['France 4', null, 'free'], ['BFMTV', null, 'free', 'bfm tv'],
+    ['CNews', null, 'free'], ['CStar', null, 'free'], ['Gulli', null, 'free'], ['TF1 Séries Films', null, 'free', 'tf1 series films'],
+    ['L\'Équipe', null, 'free', 'lequipe', 'la chaine lequipe'], ['6ter', null, 'free'], ['RMC Story', null, 'free'],
+    ['RMC Découverte', null, 'free', 'rmc decouverte'], ['Chérie 25', null, 'free', 'cherie 25'], ['LCI', null, 'free'],
+    ['franceinfo', null, 'free', 'france info'], ['T18', null, 'free'], ['Novo19', null, 'free', 'novo 19'],
+    ['Canal+ Sport', null, 'pay'], ['Canal+ Cinéma(s)', null, 'pay', 'canal cinemas', 'canal cinema'], ['beIN Sports 1', null, 'pay'],
+  ],
+  BE: [
+    ['VRT 1', null, 'free', 'een', 'vrt een'], ['VRT Canvas', null, 'free', 'canvas'], ['VTM', null, 'free'], ['Play4', null, 'free', 'play 4'],
+    ['La Une', null, 'free', 'rtbf la une'], ['Tipik', null, 'free'], ['RTL-TVI', null, 'free', 'rtl tvi'], ['Club RTL', null, 'free'],
+  ],
+  ES: [
+    ['La 1', null, 'free', 'tve la 1'], ['La 2', null, 'free', 'tve la 2'], ['Antena 3', null, 'free'], ['Cuatro', null, 'free'],
+    ['Telecinco', null, 'free'], ['laSexta', null, 'free', 'la sexta'], ['Teledeporte', null, 'free'], ['Clan', null, 'free'],
+    ['24h', null, 'free', 'canal 24 horas', '24 horas'], ['Neox', null, 'free'], ['Nova', null, 'free'], ['Mega', null, 'free'],
+    ['FDF', null, 'free'], ['Energy', null, 'free'], ['Divinity', null, 'free'], ['Boing', null, 'free'], ['Be Mad', null, 'free'],
+    ['DMAX', null, 'free'], ['Paramount Network', null, 'free'], ['TRECE', null, 'free', '13tv'], ['Ten', null, 'free'],
+    ['DKISS', null, 'free'], ['Atreseries', null, 'free'], ['Movistar Plus+', null, 'pay', 'movistar plus'],
+    ['DAZN LaLiga', null, 'pay'], ['M+ LaLiga', null, 'pay', 'movistar laliga'],
+  ],
+  MX: [
+    ['Las Estrellas', null, 'free'], ['Canal 5', null, 'free'], ['Azteca Uno', null, 'free'], ['Azteca 7', null, 'free'],
+    ['Imagen TV', null, 'free'], ['Canal Once', null, 'free', 'once'], ['Foro TV', null, 'free', 'foro'], ['Nu9ve', null, 'free'],
+    ['ADN 40', null, 'free'], ['A+', null, 'free', 'a mas'],
+  ],
+  AR: [
+    ['Telefe', null, 'free'], ['El Trece', null, 'free', 'canal 13', 'eltrece'], ['América TV', null, 'free', 'america'],
+    ['TV Pública', null, 'free', 'tv publica'], ['El Nueve', null, 'free', 'canal 9', 'elnueve'], ['Net TV', null, 'free'],
+    ['TN', null, 'pay', 'todo noticias'], ['C5N', null, 'pay'], ['TyC Sports', null, 'pay'], ['ESPN', null, 'pay'],
+  ],
+  PT: [
+    ['RTP1', null, 'free', 'rtp 1'], ['RTP2', null, 'free', 'rtp 2'], ['SIC', null, 'free'], ['TVI', null, 'free'],
+    ['RTP3', null, 'free', 'rtp 3'], ['SIC Notícias', null, 'pay', 'sic noticias'], ['CNN Portugal', null, 'pay'],
+    ['CMTV', null, 'pay'], ['Porto Canal', null, 'pay'], ['Sport TV1', null, 'pay', 'sport tv 1'],
+  ],
+  BR: [
+    ['TV Globo', null, 'free', 'globo', 'rede globo'], ['SBT', null, 'free'], ['Record', null, 'free', 'record tv', 'rede record'],
+    ['Band', null, 'free', 'tv bandeirantes'], ['RedeTV!', null, 'free', 'redetv'], ['TV Cultura', null, 'free', 'cultura'],
+    ['GloboNews', null, 'pay'], ['SporTV', null, 'pay'], ['ESPN', null, 'pay'], ['Multishow', null, 'pay'], ['GNT', null, 'pay'],
+  ],
+  NL: [
+    ['NPO 1', null, 'free'], ['NPO 2', null, 'free'], ['NPO 3', null, 'free'], ['RTL 4', null, 'free'], ['RTL 5', null, 'free'],
+    ['SBS6', null, 'free', 'sbs 6'], ['RTL 7', null, 'free'], ['Veronica', null, 'free'], ['Net5', null, 'free', 'net 5'],
+    ['RTL 8', null, 'free'], ['SBS9', null, 'free', 'sbs 9'], ['RTL Z', null, 'free'], ['Ziggo Sport', null, 'pay'],
+  ],
+};
+
+// Parole che identificano canali a pagamento tra quelli non presenti nella lineup.
+export const PAY_KEYWORDS = [
+  'sky', 'dazn', 'eurosport', 'canal+', 'canal plus', 'hbo', 'bein', 'movistar', 'premiere', 'tnt', 'espn', 'sport tv',
+  'cinemax', 'showtime', 'starz', 'nba', 'ocs', 'rmc sport', 'ziggo', 'foxtel', 'sportv', 'telecine',
+];

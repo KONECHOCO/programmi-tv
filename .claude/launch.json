@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "cineguide-dev",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["vite", "--port", "4321", "--strictPort"],
+      "port": 4321
+    }
+  ]
+}
