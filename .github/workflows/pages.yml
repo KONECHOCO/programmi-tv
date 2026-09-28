@@ -1,4 +1,5 @@
-# Pubblica su GitHub Pages (https://cineguide.ikonetsolutions.com/):
+# Pubblica su GitHub Pages (https://konechoco.github.io/programmi-tv/, senza dominio personalizzato:
+# le app leggono /epg/ da qui; il sito pubblico è cineguide.ikonetsolutions.com, repo KONECHOCO/cineguide-site):
 #   /            versione web dell'app (link condivisi)
 #   /epg/        guida TV in JSON, rigenerata ogni 6 ore
 #   /legal/      privacy, termini, supporto (URL usati negli store)

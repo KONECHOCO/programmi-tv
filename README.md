@@ -8,7 +8,7 @@ condivisione, 6 lingue (IT, EN, ES, FR, DE, PT), pubblicità AdMob e acquisto un
 ```
 GitHub Actions (ogni 6 ore)                         App (iOS / Android / web)
  scripts/epg/build-epg.mjs                           src/services/epg.js
-   ├─ XMLTV per paese (epgshare01.online)   ──►  https://cineguide.ikonetsolutions.com/epg/
+   ├─ XMLTV per paese (epgshare01.online)   ──►  https://konechoco.github.io/programmi-tv/epg/
    ├─ loghi canali (iptv-org)                          index.json · <PAESE>/channels.json · <PAESE>/<data>.json
    └─ lineup e numeri LCN (scripts/epg/lineups.mjs)
 ```
