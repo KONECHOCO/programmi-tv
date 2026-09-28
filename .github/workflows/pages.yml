@@ -12,6 +12,7 @@ on:
   workflow_dispatch:
 
 permissions:
+  actions: write
   contents: read
   pages: write
   id-token: write
@@ -48,3 +49,8 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+      # GitHub disattiva i workflow pianificati dopo 60 giorni senza commit: lo riattiviamo a ogni esecuzione.
+      - name: Mantieni attivo l'aggiornamento automatico
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X PUT repos/${{ github.repository }}/actions/workflows/pages.yml/enable
