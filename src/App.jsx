@@ -292,6 +292,7 @@ export default function App() {
             <button
               key={id}
               onClick={() => {
+                if (id !== tab && !isPro) maybeShowInterstitial();
                 setTab(id);
                 window.scrollTo({ top: 0 });
               }}

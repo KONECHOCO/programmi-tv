@@ -16,8 +16,9 @@ const IDS = {
 const TESTING = !IDS.banner;
 const unit = (kind) => IDS[kind] || TEST_IDS[platform]?.[kind];
 
-const INTERSTITIAL_MIN_GAP_MS = 4 * 60e3;
-const INTERSTITIAL_EVERY_N_OPENS = 6;
+// Interstitial solo nei passaggi naturali (apertura scheda, cambio sezione), mai al lancio: policy AdMob.
+const INTERSTITIAL_MIN_GAP_MS = 3 * 60e3;
+const INTERSTITIAL_EVERY_N_OPENS = 4;
 
 let ready = false;
 let canRequestAds = false;
@@ -89,7 +90,7 @@ async function prepareInterstitial() {
   }
 }
 
-/** Da chiamare all'apertura della scheda di un programma: ogni tanto mostra un interstitial. */
+/** Da chiamare all'apertura di una scheda programma o al cambio sezione: ogni tanto mostra un interstitial. */
 export async function maybeShowInterstitial() {
   if (!isNative || !canRequestAds) return;
   opensSinceInterstitial++;
