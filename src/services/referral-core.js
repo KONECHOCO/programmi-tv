@@ -53,7 +53,8 @@ export function configureReferral({ api, key, appId, appVersion = '', prefix = a
   cfg = { api: (api || '').replace(/\/$/, ''), key: key || '', appId, appVersion, prefix };
   try { counters = { ...ZERO, ...JSON.parse(read('counters') || '{}') }; } catch { counters = { ...ZERO }; }
   state = {
-    enabled: Boolean(cfg.api && cfg.key && cfg.appId),
+    // Solo nelle app installate dagli store: nella versione web (sito) gli inviti non hanno senso
+    enabled: isNative && Boolean(cfg.api && cfg.key && cfg.appId),
     code: read('code'),
     registered: read('registered') === '1',
     firstSeen: Number(read('firstSeen')) || 0
