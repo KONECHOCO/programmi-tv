@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 // Invia a Google Play la dichiarazione "Sicurezza dei dati" (API applications.dataSafety, formato CSV di Play Console).
-// Dati raccolti solo dall'SDK AdMob: posizione approssimativa, interazioni, log arresti anomali, diagnostica, ID dispositivo.
+// Dati raccolti dall'SDK AdMob: posizione approssimativa, interazioni, log arresti anomali, diagnostica, ID dispositivo.
+// Programma ambasciatori (solo utenti invitati): interazioni e ID dispositivo (hash) anche per prevenzione frodi.
 // Uso: PLAY_SA_PATH=chiave.json node scripts/store/play-data-safety.mjs
 import { readFileSync } from 'node:fs';
 import { playApi } from './play-api.mjs';
@@ -28,6 +29,8 @@ const types = {
   PSL_USER_INTERACTION: ['PSL_ADVERTISING', 'PSL_ANALYTICS'],
   PSL_DEVICE_ID: ['PSL_ADVERTISING'],
 };
+// Raccolti da noi (non condivisi) per il programma ambasciatori: verifica utenti reali e anti-frode.
+const collectOnly = { PSL_USER_INTERACTION: ['PSL_FRAUD_PREVENTION_SECURITY'], PSL_DEVICE_ID: ['PSL_FRAUD_PREVENTION_SECURITY'] };
 for (const [t, purposes] of Object.entries(types)) {
   const q = (k) => `PSL_DATA_USAGE_RESPONSES:${t}:${k}`;
   rows.push(
@@ -39,6 +42,7 @@ for (const [t, purposes] of Object.entries(types)) {
   for (const p of purposes) {
     rows.push([q('DATA_USAGE_COLLECTION_PURPOSE'), p, 'true'], [q('DATA_USAGE_SHARING_PURPOSE'), p, 'true']);
   }
+  for (const p of collectOnly[t] || []) rows.push([q('DATA_USAGE_COLLECTION_PURPOSE'), p, 'true']);
 }
 
 const header = 'Question ID (machine readable),Response ID (machine readable),Response value,Answer requirement,Human-friendly question label';
