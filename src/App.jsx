@@ -9,6 +9,7 @@ import { todayIn, titleKey } from './services/epg';
 import { isNative } from './services/platform';
 import { initAds, showBanner, removeBanner, maybeShowInterstitial } from './services/ads';
 import { initPurchases, subscribePurchases } from './services/purchases';
+import { initReferral } from './services/referral';
 import { syncScheduled, setupNotificationChannel, onNotificationTap } from './services/notifications';
 import { dayLabel, timeOf, addDays } from './lib/format';
 import { Chip, Toast, EmptyState } from './components/ui';
@@ -127,6 +128,11 @@ export default function App() {
   }, [prefs.theme]);
 
   // ─── Acquisti e pubblicità ───────────────────────────────────────────────
+  // Programma ambasciatori: invia dati solo se l'utente è arrivato da un invito
+  useEffect(() => {
+    initReferral().catch(() => {});
+  }, []);
+
   useEffect(() => {
     initPurchases();
     return subscribePurchases((s) => {

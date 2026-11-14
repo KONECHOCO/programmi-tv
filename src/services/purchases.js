@@ -2,10 +2,13 @@
 // (StoreKit su iOS, Google Play Billing su Android). Nessun server: lo stato "posseduto"
 // arriva dallo store e viene ripristinato con "Ripristina acquisti".
 import { isNative, platform } from './platform';
+import { trackPurchase } from './referral';
 
 export const PRO_PRODUCT_ID = 'com.ikonet.cineguide.pro';
 
 let store = null;
+// Vero solo tra "Acquista" e la conferma dello store: i ripristini non contano come nuovi acquisti
+let buying = false;
 let listeners = new Set();
 let state = { ready: false, owned: false, price: null, busy: false, error: null };
 
@@ -50,7 +53,13 @@ export async function initPurchases() {
   store
     .when()
     .productUpdated(refreshFromStore)
-    .approved((tx) => tx.finish())
+    .approved((tx) => {
+      if (buying) {
+        buying = false;
+        trackPurchase();
+      }
+      tx.finish();
+    })
     .finished(() => {
       refreshFromStore();
       emit({ busy: false });
@@ -72,9 +81,13 @@ export async function buyPro() {
     return;
   }
   emit({ busy: true, error: null });
+  buying = true;
   const result = await offer.order();
   // result definito = errore o annullamento da parte dell'utente
-  if (result) emit({ busy: false, error: result.code === window.CdvPurchase?.ErrorCode?.PAYMENT_CANCELLED ? null : result.message });
+  if (result) {
+    buying = false;
+    emit({ busy: false, error: result.code === window.CdvPurchase?.ErrorCode?.PAYMENT_CANCELLED ? null : result.message });
+  }
 }
 
 export async function restorePro() {

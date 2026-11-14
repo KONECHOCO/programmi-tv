@@ -1,7 +1,8 @@
 // Pubblicità AdMob (solo app native, disattivata per gli utenti Pro).
 // Flusso: consenso UMP (GDPR) → richiesta ATT su iOS → banner in basso + interstitial occasionali.
-import { AdMob, BannerAdPosition, BannerAdSize, BannerAdPluginEvents, AdmobConsentStatus } from '@capacitor-community/admob';
+import { AdMob, BannerAdPosition, BannerAdSize, BannerAdPluginEvents, InterstitialAdPluginEvents, AdmobConsentStatus } from '@capacitor-community/admob';
 import { isNative, platform } from './platform';
+import { attachAdMobListeners } from './referral';
 
 // ID di test ufficiali Google: vengono sostituiti in build dalle variabili VITE_ADMOB_* (codemagic.yaml).
 const TEST_IDS = {
@@ -48,6 +49,8 @@ export async function initAds(onBannerHeight) {
 
     AdMob.addListener(BannerAdPluginEvents.SizeChanged, (size) => onBannerHeight?.(bannerVisible ? size.height : 0));
     AdMob.addListener(BannerAdPluginEvents.FailedToLoad, () => onBannerHeight?.(0));
+    // Programma ambasciatori: conta gli annunci visti dagli utenti invitati (nulla per gli altri)
+    attachAdMobListeners(AdMob, { BannerAdPluginEvents, InterstitialAdPluginEvents });
   } catch (err) {
     console.warn('AdMob init:', err);
   }

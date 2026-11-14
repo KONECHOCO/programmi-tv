@@ -9,6 +9,7 @@ import { adsSupported, isPrivacyOptionsRequired, showPrivacyOptions } from '../s
 import { exactAlarmStatus, openExactAlarmSettings } from '../services/notifications';
 import { shareText } from '../services/social';
 import { Sheet } from './ui';
+import ReferralCodeForm from './ReferralCodeForm';
 
 function Row({ label, children }) {
   return (
@@ -89,6 +90,8 @@ export default function SettingsSheet({ onClose, onOpenPro, availableCountries }
         </div>
       )}
 
+      <ReferralCodeForm />
+
       <div className="mt-2">
         <Row label={t('country')}>
           <Select value={prefs.country} onChange={(v) => setPref('country', v)} options={countries.map((c) => ({ value: c.code, label: `${c.flag} ${c.name}` }))} />
@@ -142,7 +145,7 @@ export default function SettingsSheet({ onClose, onOpenPro, availableCountries }
       <div className="mt-6 text-[12px] text-muted leading-relaxed">
         <div className="font-semibold text-fg mb-1">{t('dataSources')}</div>
         {t('dataSourcesText')}
-        <div className="mt-3">CineGuide · {t('version')} {import.meta.env.VITE_APP_VERSION || '1.0.0'}</div>
+        <div className="mt-3">CineGuide · {t('version')} {import.meta.env.VITE_APP_VERSION || '1.0.2'}</div>
       </div>
     </Sheet>
   );
