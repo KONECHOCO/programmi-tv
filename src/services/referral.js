@@ -7,7 +7,7 @@ configureReferral({
   api: 'https://partner.ikonetsolutions.com',
   key: 'DazGcCof0TLvrvfz76VBVg4UBz-V9Qx-',
   appId: 'cineguide',
-  appVersion: import.meta.env.VITE_APP_VERSION || '1.0.2',
+  appVersion: import.meta.env.VITE_APP_VERSION || '1.0.3',
 });
 
 export * from './referral-core';

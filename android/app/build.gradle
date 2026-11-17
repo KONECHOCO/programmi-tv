@@ -1,20 +1,20 @@
 apply plugin: 'com.android.application'
 
 android {
-    namespace "com.ikonet.cineguide"
-    compileSdk rootProject.ext.compileSdkVersion
+    namespace = "com.ikonet.cineguide"
+    compileSdk = rootProject.ext.compileSdkVersion
     defaultConfig {
         applicationId "com.ikonet.cineguide"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode ((System.getenv("BUILD_NUMBER") ?: "1") as Integer)
-        versionName "1.0.2"
+        versionName "1.0.3"
         manifestPlaceholders = [admobAppId: System.getenv("ADMOB_ANDROID_APP_ID") ?: "ca-app-pub-1151868778464777~4109857664"]
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         aaptOptions {
              // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.
              // Default: https://android.googlesource.com/platform/frameworks/base/+/282e181b58cf72b6ca770dc7ca5f91f135444502/tools/aapt/AaptAssets.cpp#61
-            ignoreAssetsPattern '!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~'
+            ignoreAssetsPattern = '!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~'
         }
     }
     signingConfigs {

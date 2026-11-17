@@ -80,13 +80,20 @@ export function Sheet({ onClose, children, title, full = false }) {
     };
   }, []);
   return (
-    <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center animate-fade" role="dialog" aria-modal="true">
+    // Il banner AdMob è una vista nativa sopra la WebView: la scheda si ferma sopra il banner (--ad-h)
+    // per non coprirne i contenuti (norma AdMob "annunci che oscurano i contenuti").
+    <div
+      className="fixed inset-0 z-50 flex items-end sm:items-center justify-center animate-fade"
+      style={{ paddingBottom: 'var(--ad-h, 0px)' }}
+      role="dialog"
+      aria-modal="true"
+    >
       <div className="absolute inset-0 bg-black/60" onClick={onClose} />
       <div
         className={`relative w-full sm:max-w-lg bg-bg rounded-t-3xl sm:rounded-3xl border border-line shadow-2xl animate-sheet flex flex-col ${
-          full ? 'h-[92vh]' : 'max-h-[92vh]'
+          full ? 'h-[calc(92vh-var(--ad-h,0px))]' : 'max-h-[calc(92vh-var(--ad-h,0px))]'
         }`}
-        style={{ paddingBottom: 'var(--safe-bottom)' }}
+        style={{ paddingBottom: 'var(--sheet-safe, var(--safe-bottom))' }}
       >
         <div className="flex items-center justify-between px-5 pt-4 pb-2">
           <h2 className="text-lg font-bold truncate">{title}</h2>

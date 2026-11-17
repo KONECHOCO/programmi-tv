@@ -197,6 +197,12 @@ export default function App() {
   }, [epg.status, country.code]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const bottomUi = TABBAR_HEIGHT + bannerHeight;
+  // Altezza del banner (più l'area sicura) disponibile anche alle schede modali fuori da <main>.
+  useEffect(() => {
+    const root = document.documentElement.style;
+    root.setProperty('--ad-h', bannerHeight ? `calc(${bannerHeight}px + var(--safe-bottom))` : '0px');
+    root.setProperty('--sheet-safe', bannerHeight ? '0px' : 'var(--safe-bottom)');
+  }, [bannerHeight]);
   const dayData = epg.days[date];
   const liveData = epg.days[liveToday] || epg.days[epg.today];
   const upcomingDays = epg.availableDays.filter((d) => d >= addDays(liveToday, -1));

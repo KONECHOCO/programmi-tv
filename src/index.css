@@ -27,8 +27,8 @@
   --c-live: #ff4d6d;
   --c-gold: #f5b83d;
   color-scheme: dark;
-  --safe-top: env(safe-area-inset-top, 0px);
-  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-top: env(safe-area-inset-top, var(--safe-area-inset-top, 0px));
+  --safe-bottom: env(safe-area-inset-bottom, var(--safe-area-inset-bottom, 0px));
 }
 
 :root.light {
