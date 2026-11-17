@@ -24,6 +24,8 @@ end
 target 'App' do
   capacitor_pods
   # Add your Pods here
+  # Dipendenza di @capacitor-community/admob 8 non pubblicata su CocoaPods trunk: usa la copia in node_modules
+  pod 'WebViewNativeUIEngine', :path => '../../node_modules/@webview-native-ui/engine'
 end
 
 post_install do |installer|
